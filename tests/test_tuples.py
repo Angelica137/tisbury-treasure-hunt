@@ -16,6 +16,13 @@ def test_compare_records():
 
 
 def test_compare_records_True():
-    list_one_info = ('Model Ship in Large Bottle', '8A')
-    list_two_info = ('Harbor Managers Office', ('8', 'A'), 'purple')
-    assert compare_records(list_one_info, list_two_info) == True
+    list_one_item = ('Model Ship in Large Bottle', '8A')
+    list_two_item = ('Harbor Managers Office', ('8', 'A'), 'purple')
+    assert compare_records(list_one_item, list_two_item) == True
+
+
+def test_create_record():
+    list_one_item = ('Brass Spyglass', '4B')
+    list_two_item = ('Abandoned Lighthouse', ('4', 'B'), 'Blue')
+    assert create_record(list_one_item, list_two_item) == (
+        'Brass Spyglass', '4B', 'Abandoned Lighthouse', ('4', 'B'), 'Blue')
