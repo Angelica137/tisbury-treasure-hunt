@@ -10,9 +10,9 @@ def test_convert_coordinate():
 
 
 def test_compare_records():
-    list_one_info = ('Brass Spyglass', '4B')
-    list_two_info = ('Seaside Cottages', ('1', 'C'), 'blue')
-    assert compare_records(list_one_info, list_two_info) == False
+    list_one_item = ('Brass Spyglass', '4B')
+    list_two_item = ('Seaside Cottages', ('1', 'C'), 'blue')
+    assert compare_records(list_one_item, list_two_item) == False
 
 
 def test_compare_records_True():
