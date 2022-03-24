@@ -6,4 +6,7 @@ def get_coordinate(item: tuple) -> str:
 
 
 def convert_coordinate(coordinate: str) -> tuple:
+    """
+    :return: tuple containing a number-letter pair from coordinate
+    """
     return tuple(coordinate)
