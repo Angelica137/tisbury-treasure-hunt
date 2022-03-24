@@ -28,3 +28,4 @@ def create_record(list_one_item: tuple, list_two_item: tuple) -> tuple:
     """
     if compare_records(list_one_item, list_two_item):
         return list_one_item + list_two_item
+    return "not a match"

@@ -30,5 +30,5 @@ def test_create_record():
 
 def test_create_record_no_match():
     list_one_item = ('Brass Spyglass', '4B')
-    list_two_item = ('Abandoned Lighthouse', ('4', 'B'), 'Blue')
+    list_two_item = (('1', 'C'), 'Seaside Cottages', 'blue')
     assert create_record(list_one_item, list_two_item) == "not a match"
