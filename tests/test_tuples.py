@@ -35,6 +35,16 @@ def test_create_record_no_match():
 
 
 def test_clean_up():
-    items = ((('Brass Spyglass', '4B', 'Abandoned Lighthouse', ('4', 'B'), 'Blue'), ('Vintage Pirate Hat', '7E',
-                                                                                     'Quiet Inlet (Island of Mystery)', ('7', 'E'), 'Orange'), ('Crystal Crab', '6A', 'Old Schooner', ('6', 'A'), 'Purple')))
-    assert clean_up(items) == "('Brass Spyglass', 'Abandoned Lighthouse', ('4', 'B'), 'Blue')\n('Vintage Pirate Hat', 'Quiet Inlet (Island of Mystery)', ('7', 'E'), 'Orange')\n"
+    items = (
+        (
+            ('Brass Spyglass', '4B', 'Abandoned Lighthouse', ('4', 'B'), 'Blue'),
+            ('Vintage Pirate Hat', '7E',
+             'Quiet Inlet (Island of Mystery)', ('7', 'E'), 'Orange'),
+            ('Crystal Crab', '6A', 'Old Schooner', ('6', 'A'), 'Purple')
+        )
+    )
+
+    result_data = "('Brass Spyglass', 'Abandoned Lighthouse', ('4', 'B'), 'Blue')\n\
+('Vintage Pirate Hat', 'Quiet Inlet (Island of Mystery)', ('7', 'E'), 'Orange')\n\
+('Crystal Crab', 'Old Schooner', ('6', 'A'), 'Purple')\n"
+    assert clean_up(items) == result_data
