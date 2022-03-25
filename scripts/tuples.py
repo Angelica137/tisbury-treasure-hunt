@@ -29,3 +29,16 @@ def create_record(list_one_item: tuple, list_two_item: tuple) -> tuple:
     if compare_records(list_one_item, list_two_item):
         return list_one_item + list_two_item
     return "not a match"
+
+
+def clean_up(items: tuple) -> str:
+    """
+    :param items: tuple - contains tuples of with the all data for one item from both lists
+    :return repot: str - each item is returned on its own line with coordinate in format "E2"
+    removed
+    """
+    report = []
+    for item in items:
+        clean_tuple = tuple(item[:1] + item[2:])
+        report.append(clean_tuple)
+    return report
