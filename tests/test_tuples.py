@@ -32,3 +32,9 @@ def test_create_record_no_match():
     list_one_item = ('Brass Spyglass', '4B')
     list_two_item = (('1', 'C'), 'Seaside Cottages', 'blue')
     assert create_record(list_one_item, list_two_item) == "not a match"
+
+
+def test_clean_up():
+    items = ((('Brass Spyglass', '4B', 'Abandoned Lighthouse', ('4', 'B'), 'Blue'), ('Vintage Pirate Hat', '7E',
+                                                                                     'Quiet Inlet (Island of Mystery)', ('7', 'E'), 'Orange'), ('Crystal Crab', '6A', 'Old Schooner', ('6', 'A'), 'Purple')))
+    assert clean_up(items) == "('Brass Spyglass', 'Abandoned Lighthouse', ('4', 'B'), 'Blue')\n('Vintage Pirate Hat', 'Quiet Inlet (Island of Mystery)', ('7', 'E'), 'Orange')\n"
