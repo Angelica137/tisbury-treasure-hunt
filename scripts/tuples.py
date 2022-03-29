@@ -37,8 +37,5 @@ def clean_up(items: tuple) -> str:
     :return repot: str - each item is returned on its own line with coordinate in format "E2"
     removed
     """
-    report = []
-    for item in items:
-        clean_tuple = tuple(item[:1] + item[2:])
-        report.append(clean_tuple)
-    return ('\n'.join(map(str, report)))+'\n'
+    clean_tuple = tuple(tuple(item[:1] + item[2:]) for item in items)
+    return ('\n'.join(map(str, clean_tuple)))+'\n'
