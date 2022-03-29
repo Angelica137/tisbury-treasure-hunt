@@ -42,13 +42,3 @@ def clean_up(items: tuple) -> str:
         clean_tuple = tuple(item[:1] + item[2:])
         report.append(clean_tuple)
     return ('\n'.join(map(str, report)))+'\n'
-
-
-items = (
-    ("Scrimshaw Whale's Tooth", '2A', 'Deserted Docks', ('2', 'A'), 'Blue'),
-    ('Brass Spyglass', '4B', 'Abandoned Lighthouse', ('4', 'B'), 'Blue'),
-)
-
-
-a = (clean_up(items))
-print(type(a))
