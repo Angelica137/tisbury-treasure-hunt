@@ -31,11 +31,12 @@ def create_record(list_one_item: tuple, list_two_item: tuple) -> tuple:
     return "not a match"
 
 
-def clean_up(items: tuple) -> str:
+def clean_up(combined_record_group: tuple) -> str:
     """
     :param items: tuple - contains tuples of with the all data for one item from both lists
     :return repot: str - each item is returned on its own line with coordinate in format "E2"
     removed
     """
-    clean_tuple = tuple(tuple(item[:1] + item[2:]) for item in items)
+    clean_tuple = [tuple(item[:1] + item[2:])
+                   for item in combined_record_group]
     return ('\n'.join(map(str, clean_tuple)))+'\n'
